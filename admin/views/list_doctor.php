@@ -34,7 +34,9 @@
             <td>' . $phone . '</td>
             <td>' . $description . '</td>
             <td>' . $level_name . '</td>
-            <td><a href="index.php?act=del_doctor&id=' . $id . '"><button class="btn btn-danger">Xóa</button></a>
+            <td><button type="button" id="' . $id . '" class="btn btn-danger delete-data" data-bs-toggle="modal" data-bs-target="#delete-doctor">
+            Delete
+            </button>
             <button type="button" id="' . $id . '" class="btn btn-warning edit-data" data-bs-toggle="modal" data-bs-target="#update-doctor">
             Edit
             </button>
@@ -43,10 +45,6 @@
     }
     ?>
   </table>
-
-  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#update-doctor">
-    Launch demo modal
-  </button> -->
   <!-- Modal -->
   <div class="modal fade" id="update-doctor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -57,6 +55,27 @@
         </div>
         <div class="modal-body  id='info_update'">
 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="delete-doctor" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cập nhật</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <div class="modal-header flex-column">
+                <input type="hidden" id="deleteData">
+                <h4 class="modal-title w-100 text-center">Are you sure?</h4>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger confirm-data">Delete</button>
+            </div>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ if (isset($_POST['edit_id'])) {
         <div class="col">
             <div class="card card-registration">
                 <div class="row g-0">
-                    <form action="../controllers/UpdateDoctorController.php" method="post" class="d-flex">
+                    <form class="d-flex">
                         <div class="col-xl-6 d-none text-center d-xl-block">
                             <img src="uploads/<?= isset($image) ? $image : '' ?>" alt="Sample photo" class="img-fluid" />
                             <div class="mb-3">
@@ -137,7 +137,7 @@ if (isset($_POST['edit_id'])) {
 
                                 <div class="d-flex justify-content-end pt-3">
                                     <button type="reset" class="btn btn-light btn-lg">Reset all</button>
-                                    <button type="submit" name="btn-update-dt" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                    <button type="submit" name="btn-update-dt" class="btn btn-warning btn-lg ms-2 update-">Submit form</button>
                                 </div>
                     </form>
 

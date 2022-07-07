@@ -43,19 +43,7 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
  <script src="../javascript.js"></script>
- <script>
-     $(document).on('click', '.edit-data', function(){
-       var edit_id = $(this).attr('id');
-       $.ajax({
-        url: 'controllers/ajax_update_data.php',
-        type: 'post',
-        data:{edit_id:edit_id},
-        success: function(data){ 
-          $('.modal-body').html(data);
-        }
-       })
-     });
- </script>
+ <script src="../ajax-doctor.js"></script>
  </body>
 
  </html>

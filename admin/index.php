@@ -13,9 +13,6 @@ if (!empty($action)) {
         case 'manage_doctor':
             list_data_doctor();
             break;
-        case 'del_doctor':
-            del_data_doctor();
-            break;
         default:
             include 'controllers/HomeController.php';
             break;
